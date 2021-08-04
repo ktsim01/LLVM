@@ -1,0 +1,65 @@
+// Single commment test
+/* 
+    Multicomment test 
+    Multicomment test 
+    Multicomment test 
+    Multicomment test 
+*/
+
+decl i32 y = 1;
+fn printf(*i8 str, ...);
+fn scanf(*i8 str, ...);
+fn fib(i32 a) -> i32;
+
+struct my_type {
+    i32 a,
+    i32 b
+}
+
+// main() is the entry point
+fn main(i32 argc, **i8 argv) -> i32{
+    decl i32 index = 0;
+    while(index < argc){
+        printf("%d: %s\n", index+1, argv[index]);
+        index = index + 1;
+    }
+    // All primitive types
+    decl bool a = false;
+    decl i8 b = 1;
+    decl i16 c = 1;
+    decl i32 d = 1;
+    decl i64 e = 1;
+    decl f32 f = 1.2;
+    decl f64 g = 1.5;
+
+    // Pointers 
+    decl *i8 ptr = null;
+    decl ****f64 wow = 0;
+
+    // Strings
+    decl *i8 str = "String Literal";
+
+    // Arrays
+    decl [10]i32 arr;
+
+    // Function Types + C functions
+    decl fn(*i8, ...) dummy = printf;
+    dummy("Function pointers are nice to have!\n");
+
+    // Structures
+    decl my_type obj;
+    obj.a = 2;
+    obj.b = 3;
+    return 0;
+}
+
+// Recursive Fibonacci Example
+fn fib(i32 a) -> i32 {
+    if(a == 0)
+        return 0;
+    else if(a == 1)
+        return 1;
+    else{
+        return fib(a-1) + fib(a-2);
+    }
+}
