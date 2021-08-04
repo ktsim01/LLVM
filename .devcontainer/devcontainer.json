@@ -1,0 +1,7 @@
+{
+    "name": "Dev Container",
+	"dockerFile": "Dockerfile",
+	"extensions": [
+		"ms-vscode.cpptools"
+	],
+}
